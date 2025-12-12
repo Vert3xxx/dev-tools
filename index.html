@@ -10,7 +10,7 @@
 
 <header>
     <h1>DevTools Hub</h1>
-    <p>A clean, lightweight static collection of essential developer tools. Built By Vertex</p>
+    <p>A static all-in-one developer toolkit.</p>
 </header>
 
 <div class="container">
@@ -18,33 +18,73 @@
     <!-- JSON FORMATTER -->
     <section>
         <h2>JSON Formatter</h2>
-        <textarea id="jsonInput" placeholder="Paste JSON here..."></textarea>
+        <textarea id="jsonInput"></textarea>
         <button onclick="formatJSON()">Format JSON</button>
         <pre id="jsonOutput"></pre>
     </section>
 
-    <!-- BASE64 ENCODE / DECODE -->
+    <!-- BASE64 -->
     <section>
         <h2>Base64 Encoder / Decoder</h2>
-        <textarea id="b64Input" placeholder="Enter text or Base64..."></textarea>
+        <textarea id="b64Input"></textarea>
         <button onclick="encodeBase64()">Encode</button>
         <button onclick="decodeBase64()">Decode</button>
         <pre id="b64Output"></pre>
     </section>
 
-    <!-- MARKDOWN PREVIEW -->
+    <!-- MARKDOWN -->
     <section>
         <h2>Markdown Preview</h2>
-        <textarea id="mdInput" placeholder="Write Markdown..."></textarea>
+        <textarea id="mdInput"></textarea>
         <button onclick="renderMarkdown()">Preview</button>
         <div id="mdOutput" class="markdown"></div>
     </section>
 
-    <!-- UUID GENERATOR -->
+    <!-- UUID -->
     <section>
         <h2>UUID Generator</h2>
         <button onclick="generateUUID()">Generate UUID</button>
         <pre id="uuidOutput"></pre>
+    </section>
+
+    <!-- REGEX TESTER -->
+    <section>
+        <h2>Regex Tester</h2>
+        <input id="regexPattern" placeholder="Regex pattern (e.g. \\d+)">
+        <input id="regexText" placeholder="Text to test">
+        <button onclick="testRegex()">Test</button>
+        <pre id="regexOutput"></pre>
+    </section>
+
+    <!-- COLOR PICKER -->
+    <section>
+        <h2>Color Picker</h2>
+        <input type="color" id="colorPicker" onchange="pickColor()">
+        <pre id="colorOutput"></pre>
+    </section>
+
+    <!-- IMAGE COMPRESSOR -->
+    <section>
+        <h2>Image Compressor</h2>
+        <input type="file" accept="image/*" id="imageInput" onchange="compressImage()">
+        <pre id="imageOutput"></pre>
+    </section>
+
+    <!-- HASH GENERATOR -->
+    <section>
+        <h2>Hash Generator (SHA-256 & MD5)</h2>
+        <textarea id="hashInput"></textarea>
+        <button onclick="generateSHA256()">SHA-256</button>
+        <button onclick="generateMD5()">MD5</button>
+        <pre id="hashOutput"></pre>
+    </section>
+
+    <!-- TIMESTAMP CONVERTER -->
+    <section>
+        <h2>Timestamp Converter</h2>
+        <input id="timestampInput" placeholder="Enter UNIX timestamp">
+        <button onclick="convertTimestamp()">Convert</button>
+        <pre id="timestampOutput"></pre>
     </section>
 
 </div>
