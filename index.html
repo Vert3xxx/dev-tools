@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevTools Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>DevTools Hub</h1>
+    <p>All-in-one static developer tools, no backend required.</p>
+</header>
+
+<div class="container">
+
+    <!-- JSON FORMATTER -->
+    <section>
+        <h2>JSON Formatter</h2>
+        <textarea id="jsonInput" placeholder="Paste JSON here..."></textarea>
+        <button onclick="formatJSON()">Format JSON</button>
+        <pre id="jsonOutput"></pre>
+    </section>
+
+    <!-- BASE64 ENCODE / DECODE -->
+    <section>
+        <h2>Base64 Tools</h2>
+        <textarea id="b64Input" placeholder="Enter text or Base64..."></textarea>
+        <button onclick="encodeBase64()">Encode</button>
+        <button onclick="decodeBase64()">Decode</button>
+        <pre id="b64Output"></pre>
+    </section>
+
+    <!-- MARKDOWN PREVIEW -->
+    <section>
+        <h2>Markdown Preview</h2>
+        <textarea id="mdInput" placeholder="Write Markdown..."></textarea>
+        <button onclick="renderMarkdown()">Preview</button>
+        <div id="mdOutput" class="markdown"></div>
+    </section>
+
+    <!-- UUID GENERATOR -->
+    <section>
+        <h2>UUID Generator</h2>
+        <button onclick="generateUUID()">Generate UUID</button>
+        <pre id="uuidOutput"></pre>
+    </section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
