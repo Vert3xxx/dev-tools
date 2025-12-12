@@ -10,7 +10,7 @@ function formatJSON() {
     }
 }
 
-/* BASE64 */
+/* BASE64 ENCODE / DECODE */
 function encodeBase64() {
     const input = document.getElementById("b64Input").value;
     document.getElementById("b64Output").textContent = btoa(input);
@@ -29,7 +29,6 @@ function decodeBase64() {
 function renderMarkdown() {
     const md = document.getElementById("mdInput").value;
 
-    // Simple Markdown parser
     let html = md
         .replace(/^### (.*$)/gim, "<h3>$1</h3>")
         .replace(/^## (.*$)/gim, "<h2>$1</h2>")
