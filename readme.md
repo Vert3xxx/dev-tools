@@ -1,23 +1,28 @@
 # DevTools Hub  
-A static, lightweight all-in-one developer tools collection.  
-No backend. No frameworks. Everything runs directly in the browser.
+A fully static, modern all-in-one developer toolkit.
 
-## ✨ Tools Included
-- JSON Formatter  
-- Base64 Encoder / Decoder  
-- Markdown Previewer  
-- UUID Generator  
+## ✔ Tools Included
+- JSON Formatter
+- Base64 Encoder/Decoder
+- Markdown Previewer
+- UUID Generator
+- Regex Tester
+- Color Picker
+- Image Compressor
+- Hash Generator (SHA-256 + MD5)
+- Timestamp Converter
 
-## 📁 Project Structure
-- index.html
-- style.css
-- script.js
-- README.md
+## ✔ UI Features
+- Sidebar navigation
+- Light/Dark mode toggle
+- Tool icons (no logo)
+- Glass + neon modern theme
+- Smooth scrolling
 
-## 🛠 Tech Used
-- HTML  
-- CSS  
-- JavaScript  
+## ✔ Tech
+- HTML
+- CSS
+- JavaScript
 
-## 📜 License
+## License
 MIT License
