@@ -6,26 +6,44 @@
     <title>DevTools Hub</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="dark">
 
-<header>
-    <h1>DevTools Hub</h1>
-    <p>A static all-in-one developer toolkit.</p>
-</header>
+<!-- SIDEBAR -->
+<aside class="sidebar">
+    <h2>DevTools Hub</h2>
 
-<div class="container">
+    <nav>
+        <button onclick="goto('json')">JSON Formatter</button>
+        <button onclick="goto('base64')">Base64</button>
+        <button onclick="goto('markdown')">Markdown</button>
+        <button onclick="goto('uuid')">UUID</button>
+        <button onclick="goto('regex')">Regex Tester</button>
+        <button onclick="goto('color')">Color Picker</button>
+        <button onclick="goto('image')">Image Compressor</button>
+        <button onclick="goto('hash')">Hash Generator</button>
+        <button onclick="goto('timestamp')">Timestamp</button>
+    </nav>
 
-    <!-- JSON FORMATTER -->
-    <section>
-        <h2>JSON Formatter</h2>
+    <div class="themeToggle">
+        <label>Dark Mode</label>
+        <input type="checkbox" id="themeSwitch" checked onchange="toggleTheme()">
+    </div>
+</aside>
+
+<!-- MAIN CONTENT -->
+<main>
+
+    <!-- JSON -->
+    <section id="json">
+        <h1>🧩 JSON Formatter</h1>
         <textarea id="jsonInput"></textarea>
         <button onclick="formatJSON()">Format JSON</button>
         <pre id="jsonOutput"></pre>
     </section>
 
     <!-- BASE64 -->
-    <section>
-        <h2>Base64 Encoder / Decoder</h2>
+    <section id="base64">
+        <h1>🔐 Base64 Encoder / Decoder</h1>
         <textarea id="b64Input"></textarea>
         <button onclick="encodeBase64()">Encode</button>
         <button onclick="decodeBase64()">Decode</button>
@@ -33,62 +51,64 @@
     </section>
 
     <!-- MARKDOWN -->
-    <section>
-        <h2>Markdown Preview</h2>
+    <section id="markdown">
+        <h1>📝 Markdown Preview</h1>
         <textarea id="mdInput"></textarea>
         <button onclick="renderMarkdown()">Preview</button>
         <div id="mdOutput" class="markdown"></div>
     </section>
 
     <!-- UUID -->
-    <section>
-        <h2>UUID Generator</h2>
+    <section id="uuid">
+        <h1>🆔 UUID Generator</h1>
         <button onclick="generateUUID()">Generate UUID</button>
         <pre id="uuidOutput"></pre>
     </section>
 
-    <!-- REGEX TESTER -->
-    <section>
-        <h2>Regex Tester</h2>
-        <input id="regexPattern" placeholder="Regex pattern (e.g. \\d+)">
+    <!-- REGEX -->
+    <section id="regex">
+        <h1>🔎 Regex Tester</h1>
+        <input id="regexPattern" placeholder="Regex (e.g. \\d+)">
         <input id="regexText" placeholder="Text to test">
         <button onclick="testRegex()">Test</button>
         <pre id="regexOutput"></pre>
     </section>
 
-    <!-- COLOR PICKER -->
-    <section>
-        <h2>Color Picker</h2>
+    <!-- COLOR -->
+    <section id="color">
+        <h1>🎨 Color Picker</h1>
         <input type="color" id="colorPicker" onchange="pickColor()">
         <pre id="colorOutput"></pre>
     </section>
 
     <!-- IMAGE COMPRESSOR -->
-    <section>
-        <h2>Image Compressor</h2>
-        <input type="file" accept="image/*" id="imageInput" onchange="compressImage()">
+    <section id="image">
+        <h1>🖼️ Image Compressor</h1>
+        <input type="file" id="imageInput" accept="image/*" onchange="compressImage()">
         <pre id="imageOutput"></pre>
     </section>
 
-    <!-- HASH GENERATOR -->
-    <section>
-        <h2>Hash Generator (SHA-256 & MD5)</h2>
+    <!-- HASH -->
+    <section id="hash">
+        <h1>🔑 Hash Generator</h1>
         <textarea id="hashInput"></textarea>
         <button onclick="generateSHA256()">SHA-256</button>
         <button onclick="generateMD5()">MD5</button>
         <pre id="hashOutput"></pre>
     </section>
 
-    <!-- TIMESTAMP CONVERTER -->
-    <section>
-        <h2>Timestamp Converter</h2>
-        <input id="timestampInput" placeholder="Enter UNIX timestamp">
+    <!-- TIMESTAMP -->
+    <section id="timestamp">
+        <h1>⏱️ Timestamp Converter</h1>
+        <input id="timestampInput" placeholder="UNIX timestamp">
         <button onclick="convertTimestamp()">Convert</button>
         <pre id="timestampOutput"></pre>
     </section>
 
-</div>
+</main>
 
+<!-- MD5 Library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
